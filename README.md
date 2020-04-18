@@ -23,12 +23,21 @@ This sprint challenge is divided up into three parts:  Hash tables coding, block
 ## Interview Questions
 
 Explain in detail the workings of a dynamic array:
-* What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back?
+* What is the runtime complexity to access an array, add or remove from the front, and add or remove from the back? 
+
+A dynamic array will automatically adjust in size to accomodate new data being entered to the array instead of having a fixed size. When the array adjusts in size new array is doubled in size and the old array is copied to a the new section of memory, the new data is added into the array, and the old array is then deleted. To add or remove from the front then the runtime complexity is always O(n). to add or remove from the back then the runtime complexity is on average O(1) but when resizing the array it is O(n),
+
 * What is the worse case scenario if you try to extend the storage size of a dynamic array?
 
+The worst case scenario is a runtime of O(n).
+
 Explain how a blockchain is structured. What are the blocks, what is the chain? How is the data organized?
+
+The block is a dictionary with the following components: Index, Timestamp, Transactions, Proof, and the Previous Hash. The blocks in a list with the last block mined at the end.
  
-Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible?
+Explain how proof of work functions. How does it operate. How does this protect the chain from attack. What kind of attack is possible? 
+
+Each block has the hash of the previous block in it. A new block must hash the previous block and a proof and match certain criteria, for example, it must have 6 zeros in the front. If someone tried to alter a previous block then since each block contains the previous hash then each block after that block would need to be altered. Since multiple people are mining then the attacker would need to mine faster then everytone else combined to be able to overpass the other chain and be considered the valid chain. That would be very difficult to do and would probably cost a lot of money.
 
 ## Project Set Up
 
