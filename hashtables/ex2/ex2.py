@@ -26,13 +26,3 @@ def reconstruct_trip(tickets, length):
         current = hash_table_retrieve(hashtable, current)
         i += 1
     return route
-
-ticket_1 = Ticket("NONE", "PDX")
-ticket_2 = Ticket("PDX", "DCA")
-ticket_3 = Ticket("DCA", "NONE")
-
-tickets = [ticket_1, ticket_2, ticket_3]
-
-print(reconstruct_trip(tickets, 3))
-
-
