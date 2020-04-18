@@ -19,7 +19,7 @@ def get_indices_of_item_weights(weights, length, limit):
         answer = None
         key = hash_table_retrieve(ht, weights[i])
         check = hash_table_retrieve(ht, key)
-        if check is not None:
+        if check is not None and i is not weights.index(key):
             if i > weights.index(key):
                 value_1 = i
                 value_2 = weights.index(key)
